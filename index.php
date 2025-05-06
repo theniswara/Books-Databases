@@ -49,7 +49,7 @@
 
           <td class="text-center">
               <a href="" class="btn btn-success btn-sm me-2 rounded-3 fw-semibold">Update</a>
-              <a href="hapus.php?id=<?= $row["id"]?>" class="btn btn-danger btn-sm rounded-3 fw-semibold">Delete</a>
+              <a href="hapus.php?id=<?= $row["id"]?>" onclick="return confirm('Are You sure?')" class="btn btn-danger btn-sm rounded-3 fw-semibold">Delete</a>
             </td>
         </tr>
         <?php $i++ ?>
