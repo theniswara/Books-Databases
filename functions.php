@@ -17,11 +17,11 @@
     function tambah($data) {
       global $conn;
   // ambil data dari tiap elemen dalam form
-      $ISBN = $data["ISBN"];
-      $cover = $data["cover"];
-      $title = $data["title"];
-      $author = $data["author"];
-      $og_release_date = $data["og_release_date"];
+      $ISBN = htmlspecialchars($data["ISBN"]);
+      $cover = htmlspecialchars($data["cover"]);
+      $title = htmlspecialchars($data["title"]);
+      $author = htmlspecialchars($data["author"]);
+      $og_release_date = htmlspecialchars($data["og_release_date"]);
 
       //  query insert data
       $query = "INSERT INTO books

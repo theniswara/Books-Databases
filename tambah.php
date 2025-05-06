@@ -5,9 +5,18 @@ if( isset($_POST["submit"]) ) {
 
   // cek apakah data berhasil ditambah/tidak
   if( tambah($_POST) > 0 ) {
-    echo "data berhasil ditambahkan";
+    echo " 
+        <script>
+          alert('Data berhasil ditambahkan!');
+          document.location.href = 'index.php';
+        </script>
+    ";
   } else {
-    echo "data gagal ditambahkan";
+    "<script>
+          alert('Data gagal ditambahkan!');
+          document.location.href = 'index.php'
+    </script
+    ";
   }
 
 }
@@ -57,6 +66,6 @@ if( isset($_POST["submit"]) ) {
   <button type="submit" name="submit" class="btn btn-primary">Submit</button>
 </form>
   
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></>
 </body>
 </html>
