@@ -19,10 +19,12 @@
     <div class="container mt-5 mb-5">
       <h1 class="fw-bold mb-4">Books Databases</h1>
  
-      <form action="" method="post" class="d-flex" role="search">
-        <input class="form-control me-2" type="search" name="keyword" placeholder="Search" aria-label="Search"/>
+      <div class="container-fluid">
+        <form action="" method="post" class="d-flex" role="search">
+        <input class="form-control me-2" type="search" name="keyword" autofocus autocomplete="off"  placeholder="Search" aria-label="Search"/>
         <button class="btn btn-outline-success" type="submit" name="cari">Search</button>
-      </form>
+        </form>
+      </div>
 
       <br>
       <!-- table  -->
