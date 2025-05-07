@@ -71,7 +71,7 @@
     function cari($keyword) {
       $query = "SELECT * FROM books 
                   WHERE 
-                title = '$keyword'
+                title LIKE '%$keyword%'
       ";
       return query($query);
     }
