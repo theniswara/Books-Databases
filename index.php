@@ -18,7 +18,7 @@
   <body>
     <div class="container mt-5 mb-5">
       <h1 class="fw-bold mb-4">Books Databases</h1>
-
+ 
       <!-- table  -->
       <div class="table-responsive">
       <table class="table table-bordered table-striped">
@@ -48,7 +48,7 @@
 
 
           <td class="text-center">
-              <a href="" class="btn btn-success btn-sm me-2 rounded-3 fw-semibold">Update</a>
+              <a href="ubah.php?id=<?= $row["id"] ?>" class="btn btn-success btn-sm me-2 rounded-3 fw-semibold">Update</a>
               <a href="hapus.php?id=<?= $row["id"]?>" onclick="return confirm('Are You sure?')" class="btn btn-danger btn-sm rounded-3 fw-semibold">Delete</a>
             </td>
         </tr>
