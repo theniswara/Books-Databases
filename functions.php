@@ -68,7 +68,13 @@
     }
 
 
-
+    function cari($keyword) {
+      $query = "SELECT * FROM books 
+                  WHERE 
+                title = '$keyword'
+      ";
+      return query($query);
+    }
 
 
 

@@ -2,6 +2,10 @@
   require 'functions.php';
   $books = query("SELECT * FROM books");
 
+  // tombol cari ditekan
+  if( isset($_POST["cari"]) ) {
+    $books = cari($_POST["keyword"]);
+  }
 ?>
 
 
