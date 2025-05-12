@@ -104,7 +104,19 @@
       // ambil data dari tiap elemen dalam form
           $id = $data["id"];
           $ISBN = htmlspecialchars($data["ISBN"]);
-          $cover = htmlspecialchars($data["cover"]);
+
+          $gambarLama = htmlspecialchars($data["gambarLama"]);
+
+          // cek apakah user pilih gambar baru/tidak
+          if( $_FILES['cover']['error'] === 4 ) {
+            $cover = $gambarLama;
+          } else {
+            $cover = upload();
+          }
+
+         
+
+
           $title = htmlspecialchars($data["title"]);
           $author = htmlspecialchars($data["author"]);
           $og_release_date = htmlspecialchars($data["og_release_date"]);
