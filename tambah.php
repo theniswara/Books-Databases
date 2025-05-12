@@ -34,37 +34,42 @@ if( isset($_POST["submit"]) ) {
 
 </head>
 <body>
-  <h1>Add New Books</h1>  
-  
-  <form action="" method="post">
-  <div class="mb-3">
-    <label for="ISBN" class="form-label">ISBN</label>
-    <input type="text" name="ISBN" id="ISBN" class="form-control">
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <h1>Add New Books</h1>  
+        <form action="" method="post" autocomplete="off" enctype="multipart/form-data">
+        <div class="mb-3">
+          <label for="ISBN" class="form-label">ISBN</label>
+          <input type="text" name="ISBN" id="ISBN" class="form-control">
+        </div>
+        
+        <div class="mb-3">
+          <label for="title" class="form-label">Title</label>
+          <input type="text" id="title" name="title" class="form-control">
+        </div>
+        
+        <div class="mb-3">
+          <label for="author" class="form-label">Author</label>
+          <input type="text" id="author" name="author" class="form-control">
+        </div>
+      
+        <div class="mb-3">
+          <label for="og_release_date" class="form-label">Release date</label>
+          <input type="og_release_date" id="og_release_date" name="og_release_date" class="form-control">
+        </div>
+      
+        <div class="mb-3">
+          <label for="cover" class="form-label">Cover</label>
+          <input type="file" id="cover" name="cover" class="form-control">
+        </div>
+        
+        
+        <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+      </form>
+      </div>
+    </div>
   </div>
-  
-  <div class="mb-3">
-    <label for="title" class="form-label">Title</label>
-    <input type="text" id="title" name="title" class="form-control">
-  </div>
-  
-  <div class="mb-3">
-    <label for="author" class="form-label">Author</label>
-    <input type="text" id="author" name="author" class="form-control">
-  </div>
-
-  <div class="mb-3">
-    <label for="og_release_date" class="form-label">Release date</label>
-    <input type="og_release_date" id="og_release_date" name="og_release_date" class="form-control">
-  </div>
-
-  <div class="mb-3">
-    <label for="cover" class="form-label">Cover</label>
-    <input type="" id="cover" name="cover" class="form-control">
-  </div>
-  
-  
-  <button type="submit" name="submit" class="btn btn-primary">Submit</button>
-</form>
   
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
 </body>
