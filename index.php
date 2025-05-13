@@ -27,6 +27,24 @@
   </head>
 
   <body>
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid px-3">
+    <a class="navbar-brand fw-medium" href="index.php">Books Database</a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+      </ul>
+         <a href="logout.php" class="btn btn-danger rounded-3 fw-semibold ">Logout</a>
+    </div>
+  </div>
+</nav>
+
+
+    <div class="container mt-3 ">
+     
+    </div>
+
     <div class="container mt-5 mb-5">
       <h1 class="fw-bold mb-4">Books Databases</h1>
  
