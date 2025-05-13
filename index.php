@@ -28,8 +28,8 @@
 
   <body>
 
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid px-3">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+  <div class="container-fluid">
     <a class="navbar-brand fw-medium" href="index.php">Books Database</a>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">

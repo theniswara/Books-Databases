@@ -1,6 +1,13 @@
 <?php 
   session_start();
 
+  // cek cookie
+  if( isset($_COOKIE['login']) ) {
+    if( $_COOKIE['login'] == 'true' ) {
+      $_SESSION['login'] = true;
+    }
+  }
+
   if( isset($_SESSION["login"]) ) {
     header("Location: index.php");
     exit;
@@ -23,6 +30,12 @@
       if( password_verify($password, $row['password'])) {
         // set session
         $_SESSION["login"] = true;
+
+        // cek remember me
+        if ( isset($_POST['remember']) ) {
+          // buat cookie
+          setcookie('login', 'true', time() + 60);
+        }
 
 
         header("Location: index.php");
@@ -86,6 +99,10 @@
                 name="password"
                 required
               />
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" name="remember" id="remember">
+              <label class="form-check-label" for="remember">Remember Me</label>
             </div>
             <?php if( isset($error) ) :?>
             <div class="alert alert-danger mb-4" role="alert">
