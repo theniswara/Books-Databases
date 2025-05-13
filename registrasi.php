@@ -1,3 +1,20 @@
+<?php 
+
+require 'functions.php';
+
+  if( isset($_POST["register"])){
+
+    if( registrasi($_POST) > 0 ) {
+      echo "<script>
+              alert('user baru berhasil ditambahkan!')
+            </script>";
+    } else {
+      mysqli_error($conn);
+    }
+  }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,7 +43,7 @@
           <label for="password2">Password Confirmation</label>
           <input type="password" id="password2" name="password2" class="form-control" />
         </div>
-         <button type="submit" class="btn btn-primary">Register</button>
+         <button type="submit" name="register" class="btn btn-primary">Register</button>
       </div>
     </div>
   </div>
